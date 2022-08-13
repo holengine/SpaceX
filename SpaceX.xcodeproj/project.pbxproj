@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73AF8B4128A7A2480061FF1B /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B3E28A7A2480061FF1B /* LabGrotesque-Medium.ttf */; };
+		73AF8B4228A7A2480061FF1B /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B3F28A7A2480061FF1B /* LabGrotesque-Bold.ttf */; };
+		73AF8B4328A7A2480061FF1B /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B4028A7A2480061FF1B /* LabGrotesque-Regular.ttf */; };
+		73AF8B4A28A7D3140061FF1B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 73AF8B4928A7D3140061FF1B /* Alamofire */; };
+		73AF8B4D28A7D3300061FF1B /* SwiftyTranslate in Frameworks */ = {isa = PBXBuildFile; productRef = 73AF8B4C28A7D3300061FF1B /* SwiftyTranslate */; };
+		73AF8B5228A81BDF0061FF1B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF8B5128A81BDF0061FF1B /* CollectionViewCell.swift */; };
 		73D183CC289FC872004CD87B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D183CB289FC872004CD87B /* AppDelegate.swift */; };
 		73D183CE289FC872004CD87B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D183CD289FC872004CD87B /* SceneDelegate.swift */; };
 		73D183D0289FC872004CD87B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D183CF289FC872004CD87B /* ViewController.swift */; };
@@ -14,9 +20,14 @@
 		73D183D6289FC872004CD87B /* SpaceX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73D183D4289FC872004CD87B /* SpaceX.xcdatamodeld */; };
 		73D183D8289FC876004CD87B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D183D7289FC876004CD87B /* Assets.xcassets */; };
 		73D183DB289FC876004CD87B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D183D9289FC876004CD87B /* LaunchScreen.storyboard */; };
+		73ED96A9289FCD24004E03C6 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED96A8289FCD24004E03C6 /* Rocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73AF8B3E28A7A2480061FF1B /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
+		73AF8B3F28A7A2480061FF1B /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
+		73AF8B4028A7A2480061FF1B /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
+		73AF8B5128A81BDF0061FF1B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		73D183C8289FC872004CD87B /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D183CB289FC872004CD87B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73D183CD289FC872004CD87B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +37,7 @@
 		73D183D7289FC876004CD87B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73D183DA289FC876004CD87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73D183DC289FC876004CD87B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73ED96A8289FCD24004E03C6 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,12 +45,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AF8B4A28A7D3140061FF1B /* Alamofire in Frameworks */,
+				73AF8B4D28A7D3300061FF1B /* SwiftyTranslate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73AF8B3D28A7A22C0061FF1B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				73AF8B3F28A7A2480061FF1B /* LabGrotesque-Bold.ttf */,
+				73AF8B3E28A7A2480061FF1B /* LabGrotesque-Medium.ttf */,
+				73AF8B4028A7A2480061FF1B /* LabGrotesque-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		73AF8B5028A81B810061FF1B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				73D183CD289FC872004CD87B /* SceneDelegate.swift */,
+				73D183CB289FC872004CD87B /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		73D183BF289FC872004CD87B = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +91,50 @@
 		73D183CA289FC872004CD87B /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
-				73D183CB289FC872004CD87B /* AppDelegate.swift */,
-				73D183CD289FC872004CD87B /* SceneDelegate.swift */,
-				73D183CF289FC872004CD87B /* ViewController.swift */,
-				73D183D1289FC872004CD87B /* Main.storyboard */,
+				73AF8B5028A81B810061FF1B /* App */,
+				73AF8B3D28A7A22C0061FF1B /* Fonts */,
+				73ED96A3289FCCCF004E03C6 /* Networking */,
+				73D183E2289FC88B004CD87B /* Model */,
+				73D183E4289FC899004CD87B /* Controller */,
+				73D183E3289FC892004CD87B /* View */,
 				73D183D7289FC876004CD87B /* Assets.xcassets */,
 				73D183D9289FC876004CD87B /* LaunchScreen.storyboard */,
 				73D183DC289FC876004CD87B /* Info.plist */,
 				73D183D4289FC872004CD87B /* SpaceX.xcdatamodeld */,
 			);
 			path = SpaceX;
+			sourceTree = "<group>";
+		};
+		73D183E2289FC88B004CD87B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73ED96A8289FCD24004E03C6 /* Rocket.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73D183E3289FC892004CD87B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73D183D1289FC872004CD87B /* Main.storyboard */,
+				73AF8B5128A81BDF0061FF1B /* CollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		73D183E4289FC899004CD87B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				73D183CF289FC872004CD87B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		73ED96A3289FCCCF004E03C6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +153,10 @@
 			dependencies = (
 			);
 			name = SpaceX;
+			packageProductDependencies = (
+				73AF8B4928A7D3140061FF1B /* Alamofire */,
+				73AF8B4C28A7D3300061FF1B /* SwiftyTranslate */,
+			);
 			productName = SpaceX;
 			productReference = 73D183C8289FC872004CD87B /* SpaceX.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +185,10 @@
 				Base,
 			);
 			mainGroup = 73D183BF289FC872004CD87B;
+			packageReferences = (
+				73AF8B4828A7D3140061FF1B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				73AF8B4B28A7D3300061FF1B /* XCRemoteSwiftPackageReference "SwiftyTranslate" */,
+			);
 			productRefGroup = 73D183C9289FC872004CD87B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +206,9 @@
 				73D183DB289FC876004CD87B /* LaunchScreen.storyboard in Resources */,
 				73D183D8289FC876004CD87B /* Assets.xcassets in Resources */,
 				73D183D3289FC872004CD87B /* Main.storyboard in Resources */,
+				73AF8B4228A7A2480061FF1B /* LabGrotesque-Bold.ttf in Resources */,
+				73AF8B4128A7A2480061FF1B /* LabGrotesque-Medium.ttf in Resources */,
+				73AF8B4328A7A2480061FF1B /* LabGrotesque-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +221,9 @@
 			files = (
 				73D183D0289FC872004CD87B /* ViewController.swift in Sources */,
 				73D183CC289FC872004CD87B /* AppDelegate.swift in Sources */,
+				73AF8B5228A81BDF0061FF1B /* CollectionViewCell.swift in Sources */,
 				73D183CE289FC872004CD87B /* SceneDelegate.swift in Sources */,
+				73ED96A9289FCD24004E03C6 /* Rocket.swift in Sources */,
 				73D183D6289FC872004CD87B /* SpaceX.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +378,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +388,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,7 +406,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,7 +416,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -362,6 +442,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		73AF8B4828A7D3140061FF1B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		73AF8B4B28A7D3300061FF1B /* XCRemoteSwiftPackageReference "SwiftyTranslate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cpageler93/SwiftyTranslate";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		73AF8B4928A7D3140061FF1B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73AF8B4828A7D3140061FF1B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		73AF8B4C28A7D3300061FF1B /* SwiftyTranslate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73AF8B4B28A7D3300061FF1B /* XCRemoteSwiftPackageReference "SwiftyTranslate" */;
+			productName = SwiftyTranslate;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		73D183D4289FC872004CD87B /* SpaceX.xcdatamodeld */ = {

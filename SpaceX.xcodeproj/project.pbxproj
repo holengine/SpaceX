@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		736EEB0F28A948B40065C022 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB0E28A948B40065C022 /* SecondViewController.swift */; };
+		736EEB1128A948FA0065C022 /* LaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB1028A948FA0065C022 /* LaunchCell.swift */; };
+		736EEB1328A94B420065C022 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB1228A94B420065C022 /* Launch.swift */; };
 		73AF8B4128A7A2480061FF1B /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B3E28A7A2480061FF1B /* LabGrotesque-Medium.ttf */; };
 		73AF8B4228A7A2480061FF1B /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B3F28A7A2480061FF1B /* LabGrotesque-Bold.ttf */; };
 		73AF8B4328A7A2480061FF1B /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B4028A7A2480061FF1B /* LabGrotesque-Regular.ttf */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		736EEB0E28A948B40065C022 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		736EEB1028A948FA0065C022 /* LaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCell.swift; sourceTree = "<group>"; };
+		736EEB1228A94B420065C022 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		73AF8B3E28A7A2480061FF1B /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
 		73AF8B3F28A7A2480061FF1B /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
 		73AF8B4028A7A2480061FF1B /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				73ED96A8289FCD24004E03C6 /* Rocket.swift */,
+				736EEB1228A94B420065C022 /* Launch.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 			children = (
 				73D183D1289FC872004CD87B /* Main.storyboard */,
 				73AF8B5128A81BDF0061FF1B /* CollectionViewCell.swift */,
+				736EEB1028A948FA0065C022 /* LaunchCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				73D183CF289FC872004CD87B /* ViewController.swift */,
+				736EEB0E28A948B40065C022 /* SecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,10 +229,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D183D0289FC872004CD87B /* ViewController.swift in Sources */,
+				736EEB1328A94B420065C022 /* Launch.swift in Sources */,
 				73D183CC289FC872004CD87B /* AppDelegate.swift in Sources */,
 				73AF8B5228A81BDF0061FF1B /* CollectionViewCell.swift in Sources */,
 				73D183CE289FC872004CD87B /* SceneDelegate.swift in Sources */,
+				736EEB0F28A948B40065C022 /* SecondViewController.swift in Sources */,
 				73ED96A9289FCD24004E03C6 /* Rocket.swift in Sources */,
+				736EEB1128A948FA0065C022 /* LaunchCell.swift in Sources */,
 				73D183D6289FC872004CD87B /* SpaceX.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

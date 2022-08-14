@@ -27,8 +27,14 @@ class ViewController: UIViewController {
         scrollView.delegate = self
         pageControl.addTarget(self, action: #selector(pageControlDidChange(_:)), for: .valueChanged)
         view.backgroundColor = .black
+//        navController.navigationBar.isHidden = true
+//        navController.navigationBar.barTintColor = .clear
         view.addSubview(scrollView)
         view.addSubview(pageControl)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.hideNavigationBar()
     }
     
     @objc private func pageControlDidChange(_ sender: UIPageControl) {
@@ -59,7 +65,7 @@ class ViewController: UIViewController {
             pageControl.numberOfPages = items.count
             
             let verticalScrollView = UIScrollView()
-            verticalScrollView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height-100)
+            verticalScrollView.frame = CGRect(x: 0, y: -50, width: view.frame.size.width, height: view.frame.size.height-50)
             verticalScrollView.contentSize = CGSize(width: view.frame.size.width, height: 1070)
             verticalScrollView.isPagingEnabled = true
             verticalScrollView.delegate = self
@@ -69,11 +75,11 @@ class ViewController: UIViewController {
             let headColor = UIColor(red: 0.965, green: 0.965, blue: 0.965, alpha: 1)
             let color = UIColor(red: 0.792, green: 0.792, blue: 0.792, alpha: 1)
             
-            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 315))
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 365))
             imageView.imageFromUrl(urlString: items[x].flickrImages[0])
             verticalScrollView.addSubview(imageView)
             
-            let corner = UIView(frame: CGRect(x: 0, y: 290, width: view.frame.size.width, height: 50))
+            let corner = UIView(frame: CGRect(x: 0, y: 310, width: view.frame.size.width, height: 60))
             corner.backgroundColor = .black
             corner.layer.cornerRadius = 30
             corner.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
@@ -86,7 +92,6 @@ class ViewController: UIViewController {
             nameLabel.font = UIFont(name: "LabGrotesque-Medium", size: 24)
             verticalScrollView.addSubview(nameLabel)
 
-            
             let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
             layout.minimumInteritemSpacing = 0
             layout.minimumLineSpacing = 12
@@ -305,8 +310,17 @@ class ViewController: UIViewController {
             buttonShowedLaunchs.backgroundColor = UIColor(red: 0.129, green: 0.129, blue: 0.129, alpha: 1)
             buttonShowedLaunchs.titleLabel?.font = UIFont(name: "LabGrotesque-Bold", size: 16)
             buttonShowedLaunchs.layer.cornerRadius = 15
+            buttonShowedLaunchs.addTarget(self, action: #selector(showLaunchs), for: .touchUpInside)
+            buttonShowedLaunchs.tag = x
             verticalScrollView.addSubview(buttonShowedLaunchs)
         }
+    }
+    
+    @objc private func showLaunchs(sender: UIButton) {
+        let secondController = SecondViewController()
+        secondController.rocketName = items[sender.tag].name
+        secondController.rocketID = items[sender.tag].id
+        navigationController?.pushViewController(secondController, animated: true)
     }
 
     func fetchRockets() {
@@ -321,7 +335,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        pageControl.currentPage = Int(floorf(Float(scrollView.contentOffset.x) / Float(scrollView.frame.size.width)))
+        pageControl.currentPage = Int((floorf(Float(scrollView.contentOffset.x) / Float(view.frame.size.width))))
     }
 }
 
@@ -373,3 +387,15 @@ extension UIImageView {
     }
   }
 }
+
+extension UIViewController {
+    func hideNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    func showNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+}
+
+

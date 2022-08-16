@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 
 class SecondViewController: UIViewController {
-    
     var items: Launches = []
     var goodLaunches: Launches = []
     var rocketID: String = ""
@@ -87,6 +86,13 @@ extension SecondViewController:  UICollectionViewDelegate, UICollectionViewDataS
         
         cell.headLabel.text = goodLaunches[indexPath.item].name
         cell.secondLabel.text = dateFormated(date: goodLaunches[indexPath.item].dateUTC)?.formatted(date: .long, time: .omitted)
+        
+        switch goodLaunches[indexPath.item].success {
+        case .none:
+            cell.statusLaunchImage.image = UIImage(named: "failure")
+        case .some(_):
+            cell.statusLaunchImage.image = UIImage(named: "success")
+        }
         return cell
     }
 }

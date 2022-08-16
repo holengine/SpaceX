@@ -28,7 +28,7 @@ class LaunchCell: UICollectionViewCell {
         return secondLabel
     }()
     
-    var statusLaunchImage = UIImage()
+    var statusLaunchImage = UIImageView()
     
     required init?(coder: NSCoder) {
         fatalError()
@@ -38,13 +38,14 @@ class LaunchCell: UICollectionViewCell {
         super.init(frame: frame)
         contentView.addSubview(headLabel)
         contentView.addSubview(secondLabel)
+        contentView.addSubview(statusLaunchImage)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         headLabel.frame = CGRect(x: 24, y: -5, width: 300, height: 80)
         secondLabel.frame = CGRect(x: 24, y: 20, width: 300, height: 80)
-//        statusLaunchImage.
+        statusLaunchImage.frame = CGRect(x: contentView.frame.size.width-64, y: contentView.center.y-15, width: 32, height: 32)
     }
 
     override func prepareForReuse() {

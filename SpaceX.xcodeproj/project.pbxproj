@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7357419D28AA791E000D3A69 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357419C28AA791E000D3A69 /* SettingViewController.swift */; };
 		736EEB0F28A948B40065C022 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB0E28A948B40065C022 /* SecondViewController.swift */; };
 		736EEB1128A948FA0065C022 /* LaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB1028A948FA0065C022 /* LaunchCell.swift */; };
 		736EEB1328A94B420065C022 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB1228A94B420065C022 /* Launch.swift */; };
@@ -14,7 +15,6 @@
 		73AF8B4228A7A2480061FF1B /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B3F28A7A2480061FF1B /* LabGrotesque-Bold.ttf */; };
 		73AF8B4328A7A2480061FF1B /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B4028A7A2480061FF1B /* LabGrotesque-Regular.ttf */; };
 		73AF8B4A28A7D3140061FF1B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 73AF8B4928A7D3140061FF1B /* Alamofire */; };
-		73AF8B4D28A7D3300061FF1B /* SwiftyTranslate in Frameworks */ = {isa = PBXBuildFile; productRef = 73AF8B4C28A7D3300061FF1B /* SwiftyTranslate */; };
 		73AF8B5228A81BDF0061FF1B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF8B5128A81BDF0061FF1B /* CollectionViewCell.swift */; };
 		73D183CC289FC872004CD87B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D183CB289FC872004CD87B /* AppDelegate.swift */; };
 		73D183CE289FC872004CD87B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D183CD289FC872004CD87B /* SceneDelegate.swift */; };
@@ -27,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7357419C28AA791E000D3A69 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		736EEB0E28A948B40065C022 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		736EEB1028A948FA0065C022 /* LaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCell.swift; sourceTree = "<group>"; };
 		736EEB1228A94B420065C022 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				73AF8B4A28A7D3140061FF1B /* Alamofire in Frameworks */,
-				73AF8B4D28A7D3300061FF1B /* SwiftyTranslate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +135,7 @@
 			children = (
 				73D183CF289FC872004CD87B /* ViewController.swift */,
 				736EEB0E28A948B40065C022 /* SecondViewController.swift */,
+				7357419C28AA791E000D3A69 /* SettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,7 +165,6 @@
 			name = SpaceX;
 			packageProductDependencies = (
 				73AF8B4928A7D3140061FF1B /* Alamofire */,
-				73AF8B4C28A7D3300061FF1B /* SwiftyTranslate */,
 			);
 			productName = SpaceX;
 			productReference = 73D183C8289FC872004CD87B /* SpaceX.app */;
@@ -196,7 +196,6 @@
 			mainGroup = 73D183BF289FC872004CD87B;
 			packageReferences = (
 				73AF8B4828A7D3140061FF1B /* XCRemoteSwiftPackageReference "Alamofire" */,
-				73AF8B4B28A7D3300061FF1B /* XCRemoteSwiftPackageReference "SwiftyTranslate" */,
 			);
 			productRefGroup = 73D183C9289FC872004CD87B /* Products */;
 			projectDirPath = "";
@@ -233,6 +232,7 @@
 				73D183CC289FC872004CD87B /* AppDelegate.swift in Sources */,
 				73AF8B5228A81BDF0061FF1B /* CollectionViewCell.swift in Sources */,
 				73D183CE289FC872004CD87B /* SceneDelegate.swift in Sources */,
+				7357419D28AA791E000D3A69 /* SettingViewController.swift in Sources */,
 				736EEB0F28A948B40065C022 /* SecondViewController.swift in Sources */,
 				73ED96A9289FCD24004E03C6 /* Rocket.swift in Sources */,
 				736EEB1128A948FA0065C022 /* LaunchCell.swift in Sources */,
@@ -464,14 +464,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		73AF8B4B28A7D3300061FF1B /* XCRemoteSwiftPackageReference "SwiftyTranslate" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cpageler93/SwiftyTranslate";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -479,11 +471,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 73AF8B4828A7D3140061FF1B /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		73AF8B4C28A7D3300061FF1B /* SwiftyTranslate */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 73AF8B4B28A7D3300061FF1B /* XCRemoteSwiftPackageReference "SwiftyTranslate" */;
-			productName = SwiftyTranslate;
 		};
 /* End XCSwiftPackageProductDependency section */
 

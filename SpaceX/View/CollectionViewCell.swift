@@ -20,6 +20,14 @@ class CustomCollectionViewCell: UICollectionViewCell {
         return headLabel
     }()
     
+    var secondLabel: UILabel = {
+        var secondLabel = UILabel()
+        secondLabel.textColor = UIColor(red: 0.557, green: 0.557, blue: 0.561, alpha: 1)
+        secondLabel.textAlignment = .center
+        secondLabel.font = UIFont(name: "LabGrotesque-Regular", size: 13)
+        return secondLabel
+    }()
+    
     required init?(coder: NSCoder) {
         fatalError()
     }
@@ -27,11 +35,13 @@ class CustomCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(headLabel)
+        contentView.addSubview(secondLabel)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        headLabel.frame = CGRect(x: 0, y: 0, width: 89, height: 89)
+        headLabel.frame = CGRect(x: 0, y: -10, width: 89, height: 89)
+        secondLabel.frame = CGRect(x: 0, y: 13, width: 89, height: 89)
     }
 
     override func prepareForReuse() {

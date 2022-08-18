@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - WelcomeElement
+// MARK: - Launch
 struct Launch: Codable {
     let rocket: RocketID
     let name, dateUTC: String
@@ -21,6 +21,7 @@ struct Launch: Codable {
     }
 }
 
+// MARK: - RocketID
 enum RocketID: String, Codable {
     case the5E9D0D95Eda69955F709D1Eb = "5e9d0d95eda69955f709d1eb"
     case the5E9D0D95Eda69973A809D1Ec = "5e9d0d95eda69973a809d1ec"

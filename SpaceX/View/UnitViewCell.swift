@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class CustomCollectionViewCell: UICollectionViewCell {
+class UnitViewCell: UICollectionViewCell {
     
-    static let identifier = "CustomCollectionViewCell"
+    static let identifier = "UnitViewCell"
 
     var headLabel: UILabel = {
         var headLabel = UILabel()
@@ -34,6 +34,8 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = UIColor(red: 0.129, green: 0.129, blue: 0.129, alpha: 1)
+        layer.cornerRadius = 30
         contentView.addSubview(headLabel)
         contentView.addSubview(secondLabel)
     }

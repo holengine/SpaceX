@@ -7,40 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7320712128AE24D700B501E5 /* RocketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7320712028AE24D700B501E5 /* RocketData.swift */; };
+		7320712328AE24E200B501E5 /* LaunchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7320712228AE24E200B501E5 /* LaunchData.swift */; };
+		7320712528AE5F8C00B501E5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7320712428AE5F8C00B501E5 /* SettingView.swift */; };
+		7320712928AE66F200B501E5 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7320712828AE66F200B501E5 /* LaunchView.swift */; };
+		7320712B28AE776000B501E5 /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7320712A28AE776000B501E5 /* RocketView.swift */; };
 		7357419D28AA791E000D3A69 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357419C28AA791E000D3A69 /* SettingViewController.swift */; };
-		736EEB0F28A948B40065C022 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB0E28A948B40065C022 /* SecondViewController.swift */; };
-		736EEB1128A948FA0065C022 /* LaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB1028A948FA0065C022 /* LaunchCell.swift */; };
+		736EEB0F28A948B40065C022 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB0E28A948B40065C022 /* LaunchViewController.swift */; };
+		736EEB1128A948FA0065C022 /* LaunchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB1028A948FA0065C022 /* LaunchViewCell.swift */; };
 		736EEB1328A94B420065C022 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736EEB1228A94B420065C022 /* Launch.swift */; };
 		73AF8B4128A7A2480061FF1B /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B3E28A7A2480061FF1B /* LabGrotesque-Medium.ttf */; };
 		73AF8B4228A7A2480061FF1B /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B3F28A7A2480061FF1B /* LabGrotesque-Bold.ttf */; };
 		73AF8B4328A7A2480061FF1B /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73AF8B4028A7A2480061FF1B /* LabGrotesque-Regular.ttf */; };
 		73AF8B4A28A7D3140061FF1B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 73AF8B4928A7D3140061FF1B /* Alamofire */; };
-		73AF8B5228A81BDF0061FF1B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF8B5128A81BDF0061FF1B /* CollectionViewCell.swift */; };
+		73AF8B5228A81BDF0061FF1B /* UnitViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF8B5128A81BDF0061FF1B /* UnitViewCell.swift */; };
 		73D183CC289FC872004CD87B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D183CB289FC872004CD87B /* AppDelegate.swift */; };
 		73D183CE289FC872004CD87B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D183CD289FC872004CD87B /* SceneDelegate.swift */; };
-		73D183D0289FC872004CD87B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D183CF289FC872004CD87B /* ViewController.swift */; };
+		73D183D0289FC872004CD87B /* RocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D183CF289FC872004CD87B /* RocketViewController.swift */; };
 		73D183D3289FC872004CD87B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D183D1289FC872004CD87B /* Main.storyboard */; };
-		73D183D6289FC872004CD87B /* SpaceX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73D183D4289FC872004CD87B /* SpaceX.xcdatamodeld */; };
 		73D183D8289FC876004CD87B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D183D7289FC876004CD87B /* Assets.xcassets */; };
 		73D183DB289FC876004CD87B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D183D9289FC876004CD87B /* LaunchScreen.storyboard */; };
 		73ED96A9289FCD24004E03C6 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED96A8289FCD24004E03C6 /* Rocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7320712028AE24D700B501E5 /* RocketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketData.swift; sourceTree = "<group>"; };
+		7320712228AE24E200B501E5 /* LaunchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchData.swift; sourceTree = "<group>"; };
+		7320712428AE5F8C00B501E5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		7320712828AE66F200B501E5 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		7320712A28AE776000B501E5 /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
 		7357419C28AA791E000D3A69 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		736EEB0E28A948B40065C022 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		736EEB1028A948FA0065C022 /* LaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCell.swift; sourceTree = "<group>"; };
+		736EEB0E28A948B40065C022 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		736EEB1028A948FA0065C022 /* LaunchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewCell.swift; sourceTree = "<group>"; };
 		736EEB1228A94B420065C022 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		73AF8B3E28A7A2480061FF1B /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
 		73AF8B3F28A7A2480061FF1B /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
 		73AF8B4028A7A2480061FF1B /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
-		73AF8B5128A81BDF0061FF1B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		73AF8B5128A81BDF0061FF1B /* UnitViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitViewCell.swift; sourceTree = "<group>"; };
 		73D183C8289FC872004CD87B /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D183CB289FC872004CD87B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73D183CD289FC872004CD87B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		73D183CF289FC872004CD87B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		73D183CF289FC872004CD87B /* RocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewController.swift; sourceTree = "<group>"; };
 		73D183D2289FC872004CD87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		73D183D5289FC872004CD87B /* SpaceX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpaceX.xcdatamodel; sourceTree = "<group>"; };
 		73D183D7289FC876004CD87B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73D183DA289FC876004CD87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73D183DC289FC876004CD87B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,13 +77,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		73AF8B5028A81B810061FF1B /* App */ = {
+		73AF8B5028A81B810061FF1B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				73D183CD289FC872004CD87B /* SceneDelegate.swift */,
-				73D183CB289FC872004CD87B /* AppDelegate.swift */,
+				73D183D9289FC876004CD87B /* LaunchScreen.storyboard */,
+				73D183D1289FC872004CD87B /* Main.storyboard */,
+				73D183D7289FC876004CD87B /* Assets.xcassets */,
 			);
-			path = App;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		73D183BF289FC872004CD87B = {
@@ -97,16 +106,15 @@
 		73D183CA289FC872004CD87B /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
-				73AF8B5028A81B810061FF1B /* App */,
+				73D183CB289FC872004CD87B /* AppDelegate.swift */,
+				73D183CD289FC872004CD87B /* SceneDelegate.swift */,
+				73AF8B5028A81B810061FF1B /* Resources */,
 				73AF8B3D28A7A22C0061FF1B /* Fonts */,
 				73ED96A3289FCCCF004E03C6 /* Networking */,
 				73D183E2289FC88B004CD87B /* Model */,
 				73D183E4289FC899004CD87B /* Controller */,
 				73D183E3289FC892004CD87B /* View */,
-				73D183D7289FC876004CD87B /* Assets.xcassets */,
-				73D183D9289FC876004CD87B /* LaunchScreen.storyboard */,
 				73D183DC289FC876004CD87B /* Info.plist */,
-				73D183D4289FC872004CD87B /* SpaceX.xcdatamodeld */,
 			);
 			path = SpaceX;
 			sourceTree = "<group>";
@@ -123,9 +131,11 @@
 		73D183E3289FC892004CD87B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				73D183D1289FC872004CD87B /* Main.storyboard */,
-				73AF8B5128A81BDF0061FF1B /* CollectionViewCell.swift */,
-				736EEB1028A948FA0065C022 /* LaunchCell.swift */,
+				7320712A28AE776000B501E5 /* RocketView.swift */,
+				7320712828AE66F200B501E5 /* LaunchView.swift */,
+				7320712428AE5F8C00B501E5 /* SettingView.swift */,
+				73AF8B5128A81BDF0061FF1B /* UnitViewCell.swift */,
+				736EEB1028A948FA0065C022 /* LaunchViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,8 +143,8 @@
 		73D183E4289FC899004CD87B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				73D183CF289FC872004CD87B /* ViewController.swift */,
-				736EEB0E28A948B40065C022 /* SecondViewController.swift */,
+				73D183CF289FC872004CD87B /* RocketViewController.swift */,
+				736EEB0E28A948B40065C022 /* LaunchViewController.swift */,
 				7357419C28AA791E000D3A69 /* SettingViewController.swift */,
 			);
 			path = Controller;
@@ -143,6 +153,8 @@
 		73ED96A3289FCCCF004E03C6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				7320712028AE24D700B501E5 /* RocketData.swift */,
+				7320712228AE24E200B501E5 /* LaunchData.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -227,16 +239,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73D183D0289FC872004CD87B /* ViewController.swift in Sources */,
+				73D183D0289FC872004CD87B /* RocketViewController.swift in Sources */,
+				7320712128AE24D700B501E5 /* RocketData.swift in Sources */,
 				736EEB1328A94B420065C022 /* Launch.swift in Sources */,
+				7320712928AE66F200B501E5 /* LaunchView.swift in Sources */,
+				7320712328AE24E200B501E5 /* LaunchData.swift in Sources */,
 				73D183CC289FC872004CD87B /* AppDelegate.swift in Sources */,
-				73AF8B5228A81BDF0061FF1B /* CollectionViewCell.swift in Sources */,
+				7320712B28AE776000B501E5 /* RocketView.swift in Sources */,
+				73AF8B5228A81BDF0061FF1B /* UnitViewCell.swift in Sources */,
 				73D183CE289FC872004CD87B /* SceneDelegate.swift in Sources */,
 				7357419D28AA791E000D3A69 /* SettingViewController.swift in Sources */,
-				736EEB0F28A948B40065C022 /* SecondViewController.swift in Sources */,
+				736EEB0F28A948B40065C022 /* LaunchViewController.swift in Sources */,
+				7320712528AE5F8C00B501E5 /* SettingView.swift in Sources */,
 				73ED96A9289FCD24004E03C6 /* Rocket.swift in Sources */,
-				736EEB1128A948FA0065C022 /* LaunchCell.swift in Sources */,
-				73D183D6289FC872004CD87B /* SpaceX.xcdatamodeld in Sources */,
+				736EEB1128A948FA0065C022 /* LaunchViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,19 +489,6 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		73D183D4289FC872004CD87B /* SpaceX.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				73D183D5289FC872004CD87B /* SpaceX.xcdatamodel */,
-			);
-			currentVersion = 73D183D5289FC872004CD87B /* SpaceX.xcdatamodel */;
-			path = SpaceX.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 73D183C0289FC872004CD87B /* Project object */;
 }

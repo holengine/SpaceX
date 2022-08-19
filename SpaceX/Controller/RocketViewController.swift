@@ -15,7 +15,7 @@ class RocketViewController: UIViewController {
     
     private let dataSource = RocketData()
     
-    var items: Rockets = [] {
+    var rockets: Rockets = [] {
         didSet {
             configureView()
         }
@@ -71,13 +71,13 @@ class RocketViewController: UIViewController {
     private func configureView() {
         view.backgroundColor = .black
         
-        scrollView.contentSize = CGSize(width: Int(view.frame.size.width) * items.count, height: Int(view.frame.size.height)-70)
+        scrollView.contentSize = CGSize(width: Int(view.frame.size.width) * rockets.count, height: Int(view.frame.size.height)-70)
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         
-        pageControl.numberOfPages = items.count
+        pageControl.numberOfPages = rockets.count
         
-        for index in 0..<items.count {
+        for index in 0..<rockets.count {
             let page = UIView(frame: CGRect(x: CGFloat(index) * view.frame.size.width, y: 0, width: view.frame.size.width, height: scrollView.contentSize.height))
             configurePage(page: page, index: index)
             scrollView.addSubview(page)
@@ -92,7 +92,7 @@ class RocketViewController: UIViewController {
         page.addSubview(verticalScrollView)
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: -50, width: view.frame.size.width, height: 370))
-        imageView.imageFromUrl(urlString: items[index].flickrImages[0])
+        imageView.imageFromUrl(urlString: rockets[index].flickrImages[0])
         imageView.layer.cornerRadius = 1200
         verticalScrollView.addSubview(imageView)
         
@@ -103,7 +103,7 @@ class RocketViewController: UIViewController {
         verticalScrollView.addSubview(lowerCorner)
         
         let nameLabel = UILabel(frame: CGRect(x: 32, y: 296, width: 200, height: 100))
-        nameLabel.text = items[index].name
+        nameLabel.text = rockets[index].name
         nameLabel.textColor = UIColor(red: 0.965, green: 0.965, blue: 0.965, alpha: 1)
         nameLabel.numberOfLines = 0
         nameLabel.font = UIFont(name: "LabGrotesque-Medium", size: 24)
@@ -122,6 +122,7 @@ class RocketViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.tag = index
         
         verticalScrollView.addSubview(collectionView)
     
@@ -130,7 +131,7 @@ class RocketViewController: UIViewController {
         verticalScrollView.addSubview(firstFlyLabel)
         
         let firstFlyDataLabel = RegularWhiteLabel(frame: CGRect(x: view.frame.width - 232, y: 496, width: 200, height: 24))
-        firstFlyDataLabel.text = dateFormated(date: items[index].firstFlight)?.formatted(date: .long, time: .omitted)
+        firstFlyDataLabel.text = dateFormated(date: rockets[index].firstFlight)?.formatted(date: .long, time: .omitted)
         verticalScrollView.addSubview(firstFlyDataLabel)
         
         let countryLabel = RegularGrayLabel(frame: CGRect(x: 32, y: 536, width: 200, height: 24))
@@ -140,7 +141,7 @@ class RocketViewController: UIViewController {
         let dictCountry = ["United States":"США","Republic of the Marshall Islands":"Республика о. Маршалловы"]
 
         let countryDataLabel = RegularWhiteLabel(frame: CGRect(x: view.frame.width - 332, y: 536, width: 300, height: 24))
-        countryDataLabel.text = dictCountry[items[index].country]
+        countryDataLabel.text = dictCountry[rockets[index].country]
         verticalScrollView.addSubview(countryDataLabel)
         
         let costLabel = RegularGrayLabel(frame: CGRect(x: 32, y: 576, width: 200, height: 24))
@@ -148,7 +149,7 @@ class RocketViewController: UIViewController {
         verticalScrollView.addSubview(costLabel)
         
         let costDataLabel = RegularWhiteLabel(frame: CGRect(x: view.frame.width - 232, y: 576, width: 200, height: 24))
-        costDataLabel.text = "$" + String(items[index].costPerLaunch / 1000000) + " млн"
+        costDataLabel.text = "$" + String(rockets[index].costPerLaunch / 1000000) + " млн"
         verticalScrollView.addSubview(costDataLabel)
         
         //first step
@@ -162,7 +163,7 @@ class RocketViewController: UIViewController {
         verticalScrollView.addSubview(amountEnginesFirstLabel)
         
         let amountEnginesFirstDataLabel = RegularWhiteLabel(frame: CGRect(x: view.frame.width - 264, y: 680, width: 200, height: 24))
-        amountEnginesFirstDataLabel.text = String(items[index].firstStage.engines)
+        amountEnginesFirstDataLabel.text = String(rockets[index].firstStage.engines)
         verticalScrollView.addSubview(amountEnginesFirstDataLabel)
         
         let amountFuelFirstLabel = RegularGrayLabel(frame: CGRect(x: 32, y: 720, width: 200, height: 24))
@@ -170,7 +171,7 @@ class RocketViewController: UIViewController {
         verticalScrollView.addSubview(amountFuelFirstLabel)
         
         let amountFuelFirstDataLabel = RegularWhiteLabel(frame: CGRect(x: view.frame.width - 264, y: 720, width: 200, height: 24))
-        amountFuelFirstDataLabel.text = String(items[index].firstStage.fuelAmountTons)
+        amountFuelFirstDataLabel.text = String(rockets[index].firstStage.fuelAmountTons)
         verticalScrollView.addSubview(amountFuelFirstDataLabel)
         
         let tonLabel = MetricLabel(frame: CGRect(x: view.frame.width - 232, y: 720, width: 200, height: 24))
@@ -182,7 +183,7 @@ class RocketViewController: UIViewController {
         verticalScrollView.addSubview(timeBurnFirstLabel)
         
         let timeBurnFirstDataLabel = RegularWhiteLabel(frame: CGRect(x: view.frame.width - 264, y: 760, width: 200, height: 24))
-        timeBurnFirstDataLabel.text = items[index].firstStage.burnTimeSEC?.formatted()
+        timeBurnFirstDataLabel.text = rockets[index].firstStage.burnTimeSEC?.formatted()
         verticalScrollView.addSubview(timeBurnFirstDataLabel)
         
         let secLabel = MetricLabel(frame: CGRect(x: view.frame.width - 232, y: 760, width: 200, height: 24))
@@ -200,7 +201,7 @@ class RocketViewController: UIViewController {
         verticalScrollView.addSubview(amountEnginesSecondLabel)
         
         let amountEnginesSecondDataLabel = RegularWhiteLabel(frame: CGRect(x: view.frame.width - 264, y: 864, width: 200, height: 24))
-        amountEnginesSecondDataLabel.text = String(items[index].secondStage.engines)
+        amountEnginesSecondDataLabel.text = String(rockets[index].secondStage.engines)
         verticalScrollView.addSubview(amountEnginesSecondDataLabel)
         
         let amountFuelSecondLabel = RegularGrayLabel(frame: CGRect(x: 32, y: 904, width: 200, height: 24))
@@ -208,7 +209,7 @@ class RocketViewController: UIViewController {
         verticalScrollView.addSubview(amountFuelSecondLabel)
         
         let amountFuelSecondDataLabel = RegularWhiteLabel(frame: CGRect(x: view.frame.width - 264, y: 904, width: 200, height: 24))
-        amountFuelSecondDataLabel.text = String(items[index].secondStage.fuelAmountTons)
+        amountFuelSecondDataLabel.text = String(rockets[index].secondStage.fuelAmountTons)
         verticalScrollView.addSubview(amountFuelSecondDataLabel)
         
         let tonsLabel = MetricLabel(frame: CGRect(x: view.frame.width - 232, y: 904, width: 200, height: 24))
@@ -220,7 +221,7 @@ class RocketViewController: UIViewController {
         verticalScrollView.addSubview(timeBurnSecondLabel)
         
         let timeBurnSecondDataLabel = RegularWhiteLabel(frame: CGRect(x: view.frame.width - 264, y: 944, width: 200, height: 24))
-        timeBurnSecondDataLabel.text = items[index].secondStage.burnTimeSEC?.formatted()
+        timeBurnSecondDataLabel.text = rockets[index].secondStage.burnTimeSEC?.formatted()
         verticalScrollView.addSubview(timeBurnSecondDataLabel)
         
         let secsLabel = MetricLabel(frame: CGRect(x: view.frame.width - 232, y: 944, width: 200, height: 24))
@@ -250,8 +251,8 @@ class RocketViewController: UIViewController {
 
     @objc private func showLaunchs(sender: UIButton) {
         let secondController = LaunchViewController()
-        secondController.rocketName = items[sender.tag].name
-        secondController.rocketID = items[sender.tag].id
+        secondController.rocketName = rockets[sender.tag].name
+        secondController.rocketID = rockets[sender.tag].id
         navigationController?.pushViewController(secondController, animated: true)
     }
     
@@ -265,7 +266,7 @@ class RocketViewController: UIViewController {
 
 extension RocketViewController: SettingViewControllerDelegate, RocketDataDelegate {
     func didRecieveDataUpdate(data: Rockets) {
-        items = data
+        rockets = data
     }
 }
 
@@ -287,30 +288,30 @@ extension RocketViewController {
         switch indexPath.item {
         case 0:
             if unitHeight == "m" {
-                cell.headLabel.text = String(items[collectionView.tag].height.meters ?? 0)
+                cell.headLabel.text = String(rockets[collectionView.tag].height.meters ?? 0)
             }else {
-                cell.headLabel.text = String(items[collectionView.tag].height.feet ?? 0)
+                cell.headLabel.text = String(rockets[collectionView.tag].height.feet ?? 0)
             }
             cell.secondLabel.text = "Высота, " + unitHeight
         case 1:
             if unitDiameter == "m" {
-                cell.headLabel.text = String(items[collectionView.tag].diameter.meters ?? 0)
+                cell.headLabel.text = String(rockets[collectionView.tag].diameter.meters ?? 0)
             }else {
-                cell.headLabel.text = String(items[collectionView.tag].diameter.feet ?? 0)
+                cell.headLabel.text = String(rockets[collectionView.tag].diameter.feet ?? 0)
             }
             cell.secondLabel.text = "Диаметр, " + unitDiameter
         case 2:
             if unitMass == "kg" {
-                cell.headLabel.text = String(items[collectionView.tag].mass.kg)
+                cell.headLabel.text = String(rockets[collectionView.tag].mass.kg)
             }else {
-                cell.headLabel.text = String(items[collectionView.tag].mass.lb)
+                cell.headLabel.text = String(rockets[collectionView.tag].mass.lb)
             }
             cell.secondLabel.text = "Масса, " + unitMass
         case 3:
             if unitPayload == "kg" {
-                cell.headLabel.text = String(items[collectionView.tag].payloadWeights[0].kg)
+                cell.headLabel.text = String(rockets[collectionView.tag].payloadWeights[0].kg)
             }else {
-                cell.headLabel.text = String(items[collectionView.tag].payloadWeights[0].lb)
+                cell.headLabel.text = String(rockets[collectionView.tag].payloadWeights[0].lb)
             }
             cell.secondLabel.text = "Нагрузка, " + unitPayload
         default:
